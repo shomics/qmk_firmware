@@ -20,13 +20,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     /* LAYOUT_ortho_5x15[1] MO(1)
      * ┌───────────┬────────┬────────┬────────┬───────────────┬───────┬───────────┬───────────┬───────┬────────┬─────────┬─────┬─────┬───────┐
-     * │ NO   │ ESC│     F1 │     F2 │     F3 │            F4 │    F5 │     [     │     ]     │  F6   │  F7    │   F8    │ F9  │ F0  │  DEL  │
+     * │ NO   │ ESC│     F1 │     F2 │     F3 │            F4 │    F5 │    F11    │    F12    │  F6   │  F7    │   F8    │ F9  │ F10 │  DEL  │
      * ├───────────┼────────┼────────┼────────┼───────────────┼───────┼───────────┼───────────┼───────┼────────┼─────────┼─────┼─────┼───────┤
-     * │   Tab     │ NO│ BS │      ↑ │    DEL │             R │     T │  VOLUP    │   PGUP    │   Y   │   7    │    8    │  9  │ F11 │   \   │
+     * │   Tab     │ NO│ BS │      ↑ │    DEL │             R │     T │  VOLUP    │   PGUP    │   *   │   7    │    8    │  9  │  /  │   \   │
      * ├───────────┼────────┼────────┼────────┼───────────────┼───────┼───────────┼───────────┼───────┼────────┼─────────┼─────┼─────┼───────┤
-     * │ Enter/MO1 │      ← │ NO │ ↓ │      → │        CTRL+T │ CTRL+I│     ←     │     →     │   H   │   4    │    5    │  6  │ F12 │   '   │
+     * │ Enter/MO1 │      ← │ NO │ ↓ │      → │        CTRL+T │ CTRL+I│     ←     │     →     │   -   │   4    │    5    │  6  │  ;  │   '   │
      * ├───────────┼────────┼────────┼────────┼───────────────┼───────┼───────────┼───────────┼───────┼────────┼─────────┼─────┼─────┼───────┤
-     * │ Shift     │      Z │      X │ NO │ C │             V │     B │   PGDN    │   VOLDN   │   N   │   1    │    2    │  3  │  ~  │ Shift │
+     * │ Shift     │      Z │      X │ NO │ C │             V │     B │   PGDN    │   VOLDN   │   +   │   1    │    2    │  3  │  ~  │ Shift │
      * ├───────────┼────────┼────────┼────────┼───────────────┼───────┼───────────┼───────────┼───────┼────────┼─────────┼─────┼─────┼───────┤
      * │ Ctrl      │    Win │    ALT │      = │ NO │ muhenkan │ Spece │ Space/MO1 │ Enter/MO1 │ Enter │ Henkan │    0    │ ALT │ Win │  Ctrl │
      * └───────────┴────────┴────────┴────────┴───────────────┴───────┴───────────┴───────────┴───────┴────────┴─────────┴─────┴─────┴───────┘
@@ -39,10 +39,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,    KC_LWIN,    KC_LALT,    KC_EQL,    KC_NO,    KC_INT5,    KC_SPC,   LT(1, KC_SPC),    LT(1, KC_ENT),    KC_ENT,    KC_INT4,    LT(1, KC_APP),    KC_RALT,    KC_RWIN,    KC_RCTL
     ),
     [1] = LAYOUT_ortho_5x15(
-        KC_NO,    KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_LBRC,    KC_RBRC,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_DEL,
-        KC_TAB,    KC_NO,    KC_BSPC,    KC_UP,    KC_DEL,    KC_R,    KC_T,    KC_VOLU,    KC_HOME,    KC_Y,    KC_7,    KC_8,    KC_9,    KC_F11,    KC_INT3,
-        MO(1),    KC_LEFT,    KC_NO,    KC_DOWN,    KC_RIGHT,    LCTL(KC_T),    LCTL(KC_I),    KC_LEFT,    KC_RIGHT,    KC_H,    KC_4,    KC_5,    KC_6,    KC_F12,    KC_QUOT,
-       KC_LSFT,    KC_Z,    KC_X,    KC_NO,    KC_C,    KC_V,    KC_B,    KC_END,    KC_VOLD,    KC_N,    KC_1,    KC_2,    KC_3,    LSFT(KC_GRV),    KC_RSFT,
+        KC_NO,    KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F11,    KC_F12,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_DEL,
+        KC_TAB,    KC_NO,    KC_BSPC,    KC_UP,    KC_DEL,    KC_R,    KC_T,    KC_VOLU,    KC_HOME,    KC_KP_ASTERISK,    KC_7,    KC_8,    KC_9,    KC_KP_SLASH,    KC_INT3,
+        MO(1),    KC_LEFT,    KC_NO,    KC_DOWN,    KC_RIGHT,    LCTL(KC_T),    LCTL(KC_I),    KC_LEFT,    KC_RIGHT,    KC_KP_MINUS,    KC_4,    KC_5,    KC_6,    KC_SCLN,    KC_QUOT,
+       KC_LSFT,    KC_Z,    KC_X,    KC_NO,    KC_C,    KC_V,    KC_B,    KC_END,    KC_VOLD,    KC_KP_PLUS,    KC_1,    KC_2,    KC_3,    LSFT(KC_GRV),    KC_RSFT,
         KC_LCTL,    KC_LWIN,    KC_LALT,    KC_EQL,    KC_NO,    KC_INT5,    KC_SPC,    MO(1),    MO(1),    KC_ENT,    KC_INT4,    KC_0,    KC_RALT,    KC_RWIN,    KC_RCTL
     )
 };
